@@ -238,7 +238,7 @@ export default function Portfolio() {
               onClick={() => scrollToSection("me")}
             >
               <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                StephDev35qsdqsd
+                StephDev35
               </span>
             </motion.div>
 
