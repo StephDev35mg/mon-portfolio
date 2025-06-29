@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     siteName: "StephDev35 Portfolio",
     images: [
       {
-        url: "/dev.jpg",
+        url: "/steph.jpg",
         width: 1200,
         height: 630,
         alt: "StephDev - Développeur web et mobile",
@@ -79,16 +79,16 @@ export const metadata: Metadata = {
     title: "StephDev35 | Portfolio de GOSINARY NOMENJANAHARY Stéphanot",
     description:
       "Développeur web et mobile passionné, spécialisé en React, Next.js, Node.js, Laravel et technologies modernes. Découvrez mes projets, compétences et réalisations.",
-    images: ["/dev.jpg"],
+    images: ["/steph.jpg"],
     creator: "@StephDev35",
   },
   icons: {
-    icon: "/dev.jpg",
-    shortcut: "/dev.jpg",
-    apple: "/dev.jpg",
+    icon: "/steph.jpg",
+    shortcut: "/steph.jpg",
+    apple: "/steph.jpg",
     other: [
       { rel: "icon", url: "/dev.jpg" },
-      { rel: "apple-touch-icon", url: "/dev.jpg" },
+      { rel: "apple-touch-icon", url: "/steph.jpg" },
     ],
   },
   metadataBase: new URL("https://stephdev35.vercel.app/"),
@@ -111,8 +111,8 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://stephdev35.vercel.app/" />
         {/* Favicon personnalisé */}
-        <link rel="icon" href="/dev.jpg" type="image/jpeg" />
-        <link rel="apple-touch-icon" href="/dev.jpg" />
+        <link rel="icon" href="/steph.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/steph.jpg" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <VisitTracker />
