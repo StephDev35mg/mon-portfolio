@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "StephDev35 | Portfolio de GOSINARY NOMENJANAHARY Stéphanot",
     description: "Développeur web et mobile passionné, spécialisé en React, Next.js, Node.js et technologies modernes. Découvrez mes projets, compétences et réalisations.",
-    url: "https://votre-domaine.com/", // Remplace par ton vrai domaine si tu l'as
+    url: "https://stephdev35.vercel.app/", // Remplace par ton vrai domaine si tu l'as
     siteName: "StephDev35 Portfolio",
     images: [
       {

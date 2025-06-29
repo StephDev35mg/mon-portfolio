@@ -5,7 +5,10 @@ import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
-export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(
+  req: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
   const session = await getServerSession(authOptions)
   if (!session || !session.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
@@ -14,7 +17,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
   if (!user) {
     return NextResponse.json({ error: "User not found" }, { status: 404 })
   }
-  const id = params.id
+  const { id } = await params
   const data = await req.json()
   const { titleProject, imageProject, description_P, tech, liengithub, demo } = data
   // Vérifie que le projet appartient à l'utilisateur

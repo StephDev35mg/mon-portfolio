@@ -5,7 +5,10 @@ import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
-export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(
+  req: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
   const session = await getServerSession(authOptions)
   if (!session || !session.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
@@ -14,7 +17,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
   if (!user) {
     return NextResponse.json({ error: "User not found" }, { status: 404 })
   }
-  const id = params.id
+  const { id } = await params
   const data = await req.json()
   const { titleExperience, company, period, descriptionExp } = data
   // Vérifie que l'expérience appartient à l'utilisateur
@@ -29,7 +32,10 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
   return NextResponse.json(updated)
 }
 
-export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(
+  req: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
   const session = await getServerSession(authOptions)
   if (!session || !session.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
@@ -38,7 +44,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
   if (!user) {
     return NextResponse.json({ error: "User not found" }, { status: 404 })
   }
-  const id = params.id
+  const { id } = await params
   const experience = await prisma.experiences.findUnique({ where: { id: Number(id) } })
   if (!experience || experience.userId !== user.id) {
     return NextResponse.json({ error: "Not found or forbidden" }, { status: 404 })
