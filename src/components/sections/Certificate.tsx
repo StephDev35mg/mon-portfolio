@@ -28,7 +28,7 @@ export default function Certificate({ fadeInUp, staggerContainer, t }: Certifica
     {
       title: 'Certification Intelligence Artificielle',
       description: "Applications de l'IA au traitement du langage naturel (NLP).",
-      image: '/certificats/iAFormation.jpg',
+      image: '/certificats/AFormation.jpg',
       icon: <CodeXml size={24} className="text-white" />,
     },
     {
