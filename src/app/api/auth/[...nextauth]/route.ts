@@ -1,10 +1,4 @@
 import type { NextAuthOptions } from "next-auth"
-import type { NextApiRequest, NextApiResponse } from "next"
-import type { AdapterUser } from "next-auth/adapters"
-import type { Awaitable, User } from "next-auth"
-
-import type { CredentialInput } from "next-auth/providers/credentials"
-
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import GoogleProvider from "next-auth/providers/google"
