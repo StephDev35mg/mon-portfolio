@@ -1,0 +1,94 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int          @id @default(autoincrement())
+  nameUser    String
+  email       String       @unique
+  password    String
+  accounts    Account[]
+  sessions    Session[]
+  skills      Skills[]
+  projects    Projects[]
+  experiences Experiences[]
+}
+
+model Account {
+  id                 Int     @id @default(autoincrement())
+  userId             Int
+  type               String
+  provider           String
+  providerAccountId  String
+  access_token       String?
+  expires_at         Int?
+  token_type         String?
+  user               User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Session {
+  id           Int      @id @default(autoincrement())
+  sessionToken String   @unique
+  userId       Int
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Skills {
+  id          Int    @id @default(autoincrement())
+  nameSkills  String
+  imageSkills String
+  category    String
+  userId      Int
+  user        User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Projects {
+  id            Int    @id @default(autoincrement())
+  titleProject  String
+  imageProject  String
+  description_P String
+  tech          String
+  liengithub    String?
+  demo          String?
+  userId        Int
+  user          User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Experiences {
+  id              Int    @id @default(autoincrement())
+  titleExperience String
+  company         String
+  period          String
+  descriptionExp  String
+  userId          Int
+  user            User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VisitePersonne {
+  id   Int      @id @default(autoincrement())
+  ip   String
+  date DateTime @default(now())
+}
+
+model Message {
+  id          Int      @id @default(autoincrement())
+  name        String
+  email       String
+  subject     String
+  commentaire String?
+  createdAt   DateTime @default(now())
+}

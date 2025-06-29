@@ -1,0 +1,52 @@
+{
+  
+  "about": {
+  "welcome": "Bienvenue",
+  "to": "Chez StephDev35",
+  "subtitle": "Développeur web et mobile passionné par l'innovation, spécialisé en React, Laravel, Next.js et technologies modernes. J'aide les entreprises à concrétiser leurs idées numériques.",
+  "motto": "J'aime transformer des idées en solutions numériques intuitives, robustes et utiles.",
+  "download_cv": "Télécharger le CV",
+  "contact_me": "Me contacter",
+  "phone_search_placeholder": "Rechercher sur Google..."
+},
+
+  "skills": {
+    "title": "Compétences techniques",
+    "subtitle": "Maîtrise des frameworks et outils du web moderne pour des solutions robustes et évolutives."
+  },
+  "projects": {
+    "title": "Projets phares",
+    "subtitle": "Découvrez mes réalisations, applications et collaborations récentes."
+  },
+  "experience": {
+    "title": "Expériences professionnelles",
+    "subtitle": "Mon parcours, mes missions et les entreprises qui m'ont fait confiance."
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Discutons de votre projet ou de vos besoins en développement. Je réponds rapidement !"
+  },
+  "certificate": {
+    "title": "Certificats & Formations",
+    "subtitle": "Formations intensives et certifications en développement web, mobile et technologies innovantes.",
+    "options": [
+      { "title": "React Avancé", "description": "Maîtrise des hooks, contextes et performances." },
+      { "title": "Développement Mobile", "description": "Création d'applications mobiles performantes." },
+      { "title": "Backend Moderne", "description": "Node.js, Laravel et API REST sécurisées." },
+      { "title": "UI/UX Design", "description": "Conception d'interfaces intuitives et attractives." },
+      { "title": "Cloud & DevOps", "description": "Déploiement, CI/CD et gestion d'infrastructure." }
+    ]
+  },
+  "navbar": {
+    "me": "Moi",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "experiences": "Expériences",
+    "certificate": "Certificats",
+    "contact": "Contact"
+  },
+  "footer": {
+    "role": "Développeur Full Stack & Créateur Digital",
+    "rights": "Tous droits réservés."
+  }
+} 

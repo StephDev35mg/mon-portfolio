@@ -1,0 +1,50 @@
+{
+  "about": {
+    "welcome": "Welcome",
+    "to": "To StephDev35",
+    "subtitle": "Web and mobile developer passionate about innovation, specialized in React, Laravel, Next.js and modern technologies. I help companies bring their digital ideas to life.",
+    "motto": "I love turning ideas into intuitive, robust, and useful digital solutions.",
+    "download_cv": "Download CV",
+    "contact_me": "Contact me",
+    "phone_search_placeholder": "Search Google..."
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Mastery of modern web frameworks and tools for robust and scalable solutions."
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Discover my latest work, applications, and collaborations."
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "My journey, missions, and the companies that trusted me."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Let's discuss your project or development needs. I reply quickly!"
+  },
+  "certificate": {
+    "title": "Certificates & Training",
+    "subtitle": "Intensive training and certifications in web, mobile, and innovative technologies.",
+    "options": [
+      { "title": "Advanced React", "description": "Mastery of hooks, contexts, and performance." },
+      { "title": "Mobile Development", "description": "Building high-performance mobile applications." },
+      { "title": "Modern Backend", "description": "Node.js, Laravel, and secure REST APIs." },
+      { "title": "UI/UX Design", "description": "Designing intuitive and attractive interfaces." },
+      { "title": "Cloud & DevOps", "description": "Deployment, CI/CD, and infrastructure management." }
+    ]
+  },
+  "navbar": {
+    "me": "Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experiences": "Experience",
+    "certificate": "Certificates",
+    "contact": "Contact"
+  },
+  "footer": {
+    "role": "Full Stack Developer & Digital Creator",
+    "rights": "All rights reserved."
+  }
+} 
