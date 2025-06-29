@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "@/lib/auth"
 import { PrismaClient } from "@prisma/client"
-import bcrypt from "bcryptjs"
+import bcryptjs from "bcryptjs"
 
 const prisma = new PrismaClient()
 
@@ -20,12 +20,12 @@ export async function PATCH(req: NextRequest) {
     return NextResponse.json({ error: "User not found" }, { status: 404 })
   }
 
-  const isValid = await bcrypt.compare(oldPassword ?? '', user.password)
+  const isValid = await bcryptjs.compare(oldPassword ?? '', user.password)
   if (!isValid) {
     return NextResponse.json({ error: "Invalid current password" }, { status: 400 })
   }
 
-  const hashed = await bcrypt.hash(newPassword, 10)
+  const hashed = await bcryptjs.hash(newPassword, 10)
   await prisma.user.update({
     where: { email: session.user.email },
     data: { password: hashed },
