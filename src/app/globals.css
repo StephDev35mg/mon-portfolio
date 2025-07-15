@@ -127,5 +127,27 @@
   }
   body {
     @apply bg-background text-foreground;
+   
+      justify-content: center;
+      box-sizing: border-box;
+    
   }
 }
+
+/* Mesh gradient */
+
+@keyframes one{
+  ex{left: 0px; top: 0px;}
+  25% {left: -100px; top: 70px;}
+  50% {left: 20px; top: 150px;}
+  75%{left: 50px; top: 100px;}
+  100% {left: 0px; top: 0px;}
+}
+@keyframes two {
+  ex{left: 0px; top: 0px;}
+  25% {left: 50px; top: 10px;}
+  50% {left: 100px; top: 50px;}
+  75%{left: 50px; top: 100px;}
+  100% {left: 0px; top: 0px;}
+}
+
