@@ -8,7 +8,7 @@ export default function AboutSection({ scrollToSection, scaleOnHover, t, activeS
     <section id="me" className=" px-4 sm:px-6">
       <div className="container mx-auto max-w-7xl">
         <motion.div
-          className="bg-white dark:bg-background rounded-3xl  overflow-hidden"
+          className="  rounded-3xl  overflow-hidden"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -45,7 +45,7 @@ export default function AboutSection({ scrollToSection, scaleOnHover, t, activeS
 
               {/* Profile Card */}
               <motion.div
-                className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-muted rounded-2xl"
+                className="flex items-center gap-4 p-4  rounded-2xl"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
