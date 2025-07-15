@@ -224,7 +224,7 @@ export default function Portfolio() {
 
       {/* Header */}
       <motion.header
-        className="sticky top-0 z-40 bg-white/80 dark:bg-background/80 backdrop-blur-sm border-none "
+        className="sticky top-0 z-40  backdrop-blur-sm border-none "
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
