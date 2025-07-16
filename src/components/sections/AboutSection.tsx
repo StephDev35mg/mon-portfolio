@@ -5,7 +5,8 @@ import { Download, Phone, AlignJustify, ChevronLeft, Circle, Search } from "luci
 
 export default function AboutSection({ scrollToSection, scaleOnHover, t, activeSection }: { scrollToSection: (id: string) => void, scaleOnHover: any, t: (key: string) => string, activeSection: string }) {
   return (
-    <section id="me" className=" px-4 sm:px-6">
+   
+      <section id="me" className="px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           className="  rounded-3xl  overflow-hidden"
@@ -13,7 +14,7 @@ export default function AboutSection({ scrollToSection, scaleOnHover, t, activeS
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="grid lg:grid-cols-2 gap-12 p-6 sm:p-10 lg:p-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12    items-center">
             {/* Left Content */}
             <motion.div
               className="space-y-8"
@@ -21,7 +22,7 @@ export default function AboutSection({ scrollToSection, scaleOnHover, t, activeS
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="space-y-6">
+              <div className="space-y-2">
                 <motion.h1
                   className="text-4xl text-center sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 leading-tight"
                   initial={{ opacity: 0, y: 30 }}
