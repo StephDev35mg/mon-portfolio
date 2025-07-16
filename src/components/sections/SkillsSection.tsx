@@ -12,7 +12,7 @@ export default function SkillsSection({ skills, fadeInUp, staggerContainer, t }:
   return (
     <motion.section
       id="skills"
-      className="py-20 px-6 dark:bg-background"
+      className="py-20 px-6"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
