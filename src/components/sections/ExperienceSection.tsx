@@ -18,7 +18,7 @@ export default function ExperienceSection({ fadeInUp, staggerContainer, t, exper
   return (
     <motion.section
       id="experiences"
-      className="py-10 px-6 dark:bg-background"
+      className="py-10 px-6"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
