@@ -28,7 +28,7 @@ export default function Certificate({ fadeInUp, staggerContainer, t }: Certifica
     {
       title: 'Certification Intelligence Artificielle',
       description: "Applications de l'IA au traitement du langage naturel (NLP).",
-      image: '/certificats/AFormation.jpg',
+      image: '/certificats/iAFormation.jpg',
       icon: <CodeXml size={24} className="text-white" />,
     },
     {
@@ -62,7 +62,7 @@ export default function Certificate({ fadeInUp, staggerContainer, t }: Certifica
   return (
     <motion.section
       id="certificate"
-      className="py-20 px-6 bg-white dark:bg-background"
+      className="py-20 px-6"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: '-100px' }}
