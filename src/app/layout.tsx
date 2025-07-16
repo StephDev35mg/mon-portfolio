@@ -114,22 +114,22 @@ export default function RootLayout({
         <link rel="icon" href="/steph.jpg" type="image/jpeg" />
         <link rel="apple-touch-icon" href="/steph.jpg" />
       </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="absolute inset-0 top-[50px] w-full h-full -z-10 inline-flex justify-center">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
+        <div className="fixed inset-0 top-[50px] w-full h-full -z-10 inline-flex justify-center overflow-x-hidden">
           <div
-            className="w-[500px] h-[500px] rounded-full relative opacity-50 blur-[120px] bg-[rgb(30,0,255)] animate-[one_10s_infinite]"
+            className="w-[500px] h-[600px] rounded-full relative opacity-50 blur-[120px] bg-[rgb(30,0,255)] animate-[one_10s_infinite]"
             style={{
               animationName: 'one',
             }}
           />
           <div
-            className="w-[400px] h-[400px] rounded-full relative opacity-50 blur-[120px] bg-[rgb(255,72,173)] animate-[two_10s_infinite]"
+            className="w-[400px] h-[500px] rounded-full relative opacity-50 blur-[120px] bg-[rgb(255,72,173)] animate-[two_10s_infinite]"
             style={{
               animationName: 'two',
             }}
           />
           <div
-            className="w-[400px] h-[400px] rounded-full relative opacity-50 blur-[120px] bg-[rgb(140,0,215)] animate-[two_10s_infinite]"
+            className="w-[400px] h-[500px] rounded-full relative opacity-50 blur-[120px] bg-[rgb(140,0,215)] animate-[two_10s_infinite]"
             style={{
               animationName: 'two',
             }}
