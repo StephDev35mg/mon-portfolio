@@ -38,7 +38,7 @@ export default function ProjectsSection({ projects, fadeInUp, staggerContainer, 
   return (
     <motion.section
       id="projects"
-      className="py-10 px-6 bg-white dark:bg-background"
+      className="py-10 px-6"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
