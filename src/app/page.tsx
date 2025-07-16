@@ -31,8 +31,9 @@ function TabBarMobile({ activeSection, scrollToSection, t }: { activeSection: st
   ];
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-transparent">
-      <div className="mx-auto max-w-[420px] px-2 ">
-        <div className="flex justify-between items-center bg-gray-100/90 dark:bg-gray-900/90 rounded-2xl px-2 py-4 shadow-lg">
+      <div className="mx-auto max-w-[420px]  ">
+      <div className="flex justify-between items-center bg-gray-100/90 dark:bg-gray-900/90 rounded-2xl px-2 py-4 shadow-lg">
+        
           {tabs.map(tab => (
             <button
               key={tab.name}
@@ -280,7 +281,7 @@ export default function Portfolio() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="flex border-gray-300 text-gray-700 hover:bg-gray-50 items-center justify-center p-2 text-lg"
+                      className="flex  hover:bg-gray-50 items-center justify-center p-2 text-lg"
                     >
                       <span className="font-emoji text-xl">
                         {language === 'fr' ? '🇫🇷' : '🇬🇧'}
@@ -323,7 +324,8 @@ export default function Portfolio() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="md:flex border-gray-300 text-gray-700 hover:bg-gray-50"
+                  className="md:flex border-gray-300  hover:bg-gray-50"
+
                   onClick={() => {
                     if (typeof window !== 'undefined') {
                       const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
