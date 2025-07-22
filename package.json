@@ -47,6 +47,7 @@
     "prisma": "^6.10.1",
     "react": "^19.0.0",
     "react-calendar": "^6.0.0",
+    "react-canvas-confetti": "^2.0.7",
     "react-dom": "^19.0.0",
     "recharts": "^3.0.0",
     "sonner": "^2.0.5",

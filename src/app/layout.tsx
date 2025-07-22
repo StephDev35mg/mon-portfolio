@@ -104,6 +104,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
       <Head>
         {/* SEO meta tags supplémentaires */}
         <meta name="keywords" content="StephDev35, Stéphanot Gosinary, Portfolio, Développeur web, Développeur mobile, React, Next.js, Node.js, Laravel, Javascript, Typescript, Frontend, Backend, Projets, Compétences, Programmation, Madagascar, Fullstack, Développement web, Développement mobile" />

@@ -20,6 +20,8 @@ import {
 import { getT } from "@/lib/locale"
 import { Skeleton } from "@/components/ui/skeleton"
 import Certificate from "@/components/sections/Certificate"
+import confetti from "canvas-confetti";
+
 function TabBarMobile({ activeSection, scrollToSection, t }: { activeSection: string, scrollToSection: (id: string) => void, t: (key: string) => string }) {
   const tabs = [
     { name: 'me', icon: <User className="h-5 w-5" /> },
@@ -50,6 +52,38 @@ function TabBarMobile({ activeSection, scrollToSection, t }: { activeSection: st
   );
 }
 
+function randomInRange(min: number, max: number) {
+  return Math.random() * (max - min) + min;
+}
+
+function launchConfetti(isDarkTheme: boolean) {
+  const end = Date.now() + 2 * 1000;
+
+  // Select colors based on the theme
+  const colors = isDarkTheme ? ["#FBB5E0", "#ffffff"] : ["#FBB5E0", "#050715"];
+  
+  (function frame() {
+    confetti({
+      particleCount: 2,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors: colors,
+    });
+  
+    confetti({
+      particleCount: 2,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors: colors,
+    });
+  
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  })();
+}
 export default function Portfolio() {
   const [isHydrated, setIsHydrated] = useState(false)
   const [isDark, setIsDark] = useState(false)
@@ -272,38 +306,18 @@ export default function Portfolio() {
 
             {/* Right side buttons */}
             <div className="flex items-center gap-4">
-
-
-
               <DropdownMenu>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex  hover:bg-gray-50 items-center justify-center p-2 text-lg"
-                    >
-                      <span className="font-emoji text-xl">
-                        {language === 'fr' ? '🇫🇷' : '🇬🇧'}
-                      </span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-32">
-                    <DropdownMenuItem
-                      onClick={() => setLanguage('fr')}
-                      className={language === 'fr' ? 'font-bold text-purple-600' : ''}
-                    >
-                      🇫🇷 <span className="ml-2">Français</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      onClick={() => setLanguage('en')}
-                      className={language === 'en' ? 'font-bold text-purple-600' : ''}
-                    >
-                      🇬🇧 <span className="ml-2">English</span>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex  hover:bg-gray-50 items-center justify-center p-2 text-lg"
+                  >
+                    <span className="font-emoji text-xl">
+                      {language === 'fr' ? '🇫🇷' : '🇬🇧'}
+                    </span>
+                  </Button>
+                </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-32">
                   <DropdownMenuItem
                     onClick={() => setLanguage('fr')}
@@ -325,7 +339,6 @@ export default function Portfolio() {
                   variant="outline"
                   size="sm"
                   className="md:flex border-gray-300  hover:bg-gray-50"
-
                   onClick={() => {
                     if (typeof window !== 'undefined') {
                       const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
@@ -344,7 +357,7 @@ export default function Portfolio() {
 
               {/* Theme Toggle */}
               <motion.div {...scaleOnHover}>
-                <Button variant="outline" size="sm" onClick={() => setIsDark(!isDark)} className="border-gray-300">
+                <Button variant="outline" size="sm" onClick={() => { setIsDark(!isDark); launchConfetti(!isDark); }} className="border-gray-300">
                   {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                 </Button>
               </motion.div>
